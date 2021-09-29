@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Đăng nhập hoặc đăng ký</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./vendors/css/cute-alert.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
+</head>
+<body>
+    <div class="app">
+        <div class="login">
+            <div class="login-left">
+                <div class="login-left__img">
+                    <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="">
+                </div>
+
+                <div class="login-left__text">
+                    Facebook giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.
+                </div>
+            </div>
+            <div class="login-right">
+                <div class="form-login">
+                    <form action="home.html">
+                        <input value= "" id="TK" type="text" placeholder="Email hoặc số điện thoại" class="form-login__id" required>
+                        <input value= "" id="PW" type="password" placeholder="Mật khẩu" class="form-login__pw" required>
+                        <button type="submit" class="form-login__btn btn"> Đăng nhập</button>
+                    </form>
+                    <a href="#" onclick="return false" class="form-login__text-forgetpw">Quên mật khẩu?</a>
+                    <div class="form-hr"></div>
+                    <button class="form-signup__btn btn">Tạo tài khoản mới</button>
+                </div>
+                <div class="login-right__text">
+                    <span>Tạo trang</span> dành cho người nổi tiếng, nhãn hiệu hoặc danh nghiệp.
+                </div>
+            </div>
+        </div>
+        <div class="overplay">
+            <div class="overplay-body">
+
+                <!-- Đăng ký -->
+                <div class="sign-up">
+                    <div class="sign-up__head">
+                        <div class="sign-up__heading">Đăng ký</div>
+                        <p class="sign-up__sub-heading">Nhanh chóng và dễ dàng.</p>
+                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y2/r/__geKiQnSG-.png" alt="" class="sign-up__close">
+                    </div>
+        
+                    <div class="form-hr"></div>
+        
+                    <form class="sign-up__action" action="home.html">
+                        <div class="sign-up__name">
+                            <input type="text" class="sign-up__first-name" placeholder="Họ" required>
+                            <input type="text" class="sign-up__last-name" placeholder="Tên" required>
+                        </div>
+                        <input type="text" class="sign-up__phone" placeholder="Số di động hoặc email" required>
+                        <input type="password" class="sign-up__pw" placeholder="Mật khẩu mới" required>
+                        <div class="sign-up__gender">
+                            <div class="sign-up__gender-head">Giới tính</div>
+                            <span class="sign-up__gender-icon"></span>
+                            <div class="sign-up__gender-radio">
+                                <label for="male" class="gender-radio__male">
+                                    Nam
+                                    <input checked type="radio" name="gender" id="male">
+                                </label>
+                                <label for="female" class="gender-radio__female">
+                                    Nữ
+                                    <input type="radio" name="gender" id="female">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sign-up__policy">
+                            Bằng cách nhấp vào Đăng ký, bạn đồng ý với
+                            <span> Điều khoản, Chính sách dữ liệu </span> và <span>Chính sách cookie</span> của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào.
+                        </div>
+                        <button type="submit" class="btn sign-up__btn">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./vendors/js/cute-alert.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/login.js"></script>
+</body>
+</html>

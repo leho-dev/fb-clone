@@ -1,0 +1,31 @@
+@import "./abstracts/variables.css";
+@import "./components/header.css";
+@import "./components/footer.css";
+@import "./components/switchmode.css";
+@import "./layout/mess-container.css";
+
+
+.app {
+    background: var(--white-color);
+}
+
+.app-grid {
+    max-width: 1365px;
+    margin: 0 auto;
+}
+
+
+.app.dark {
+    --bg-color: #18191a;
+    --white-color: #242526;
+    --text-color: #e4e6eb;
+    --hover-item: rgb(31, 32, 32);
+    --border-color: #dcdfe400;
+    --rgba-black: rgba(255, 255, 255, 0.6);
+    --active-min: #252f3c;
+}
+
+.switch-mode-mess {
+    margin-left: auto;
+    margin-right: 20px;
+}

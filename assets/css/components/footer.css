@@ -1,0 +1,13 @@
+footer {
+    font-size: 1.3rem;
+    color: var(--gray-color);
+}
+
+.setting__footer {
+    padding: 0 12px;
+}
+
+footer span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

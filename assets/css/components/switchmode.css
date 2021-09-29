@@ -1,0 +1,43 @@
+.header-switch {
+    
+}
+
+.header-switch__box {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid var(--rgba-black);
+    border-radius: 20px;
+    padding: 2px 6px;
+    transition: all ease-in-out 0.5s;
+}
+
+.header-switch__box:hover {
+    cursor: pointer;
+    background-color: var(--hover-item);
+}
+
+.header-switch-icon {
+    font-size: 2rem;
+}
+
+.switch-sun {
+    transform: translateX(0);
+    transition: transform ease-in-out 0.5s;
+}
+
+.switch-moon {
+    transform: translateX(100px);
+    transition: transform ease-in-out 0.5s;
+}
+
+.header-switch__box.dark
+.switch-sun {
+    transform: translateX(-100px);
+}
+
+.header-switch__box.dark
+.switch-moon {
+    transform: translateX(0);
+}

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger | Facebook</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/mess.css">
+    <link rel="stylesheet" href="./vendors/css/cute-alert.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css" />
+</head>
+<body>
+    <div class="app">
+        <div class="app-grid">
+
+            <header class="header">
+                <div class="header-grid">
+                    <div class="header-left">
+                        <a href="./home.html">
+                            <div class="header-left__logo">
+                                <i class="fab fa-facebook header-left__icon-logo"></i>
+                            </div>
+                        </a>
+                        <div class="header-left__search">
+                            <div class="header-left__search-icon">
+                                <i class="fal fa-search"></i>
+                            </div>
+                            <input type="text" id="search-input" class="header-left__search-input" placeholder="Tìm kiếm trên Facebook">
+                            <ul class="header-left__search-history">
+                                <li class="header-left__search-history-item">
+                                    Không có tìm kiếm nào gần đây
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- <ul class="header-main">
+                        <li class="header-main__item home-btn active nav-home">
+                            <i class="fas fa-home"></i>
+                            <span class="header-main__item-title">Trang chủ</span>
+                        </li>
+                        <li class="header-main__item">
+                            <i class="fas fa-user-friends"></i>
+                            <span class="header-main__item-title">Nhóm</span>
+                        </li>
+                        <li class="header-main__item">
+                            <i class="fas fa-gamepad"></i>
+                            <span class="header-main__item-title">Trò chơi</span>
+                        </li>
+                        <li class="header-main__item nav-left-layout">
+                            <i class="fas fa-bars"></i>
+                            <span class="header-main__item-title">Khác</span>
+                        </li>
+                    </ul> -->
+
+                    <div class="header-switch switch-mode-mess">
+
+                        <div class="header-switch__box">
+                            <div style="color: rgba(235, 235, 235, 0.842)" class="header-switch-icon switch-moon">
+                                <i class="fas fa-moon"></i>
+                            </div>
+                            <div style="color: rgb(226, 226, 116)" class="header-switch-icon switch-sun">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <ul class="header-right">
+                        <!-- <li class="header-right__profile nav-wall">
+                            <img src="" alt="" class="header-profile__img avt">
+                            <span class="header-profile__name last-name">Hồ</span>
+                        </li> -->
+                        
+                        <!-- <li class="header-right__item">
+                            <span class="header-right__item-count">
+                                1
+                            </span>
+                            <i class="fas fa-bell header-right__item-notify"></i>
+                            <div class="header-right__item-more header-right__notify">
+                                <div class="notify-heading">
+                                    <h2 class="notify-heading__text">
+                                        Thông báo
+                                    </h2>
+                                    <div class="notify-heading__right">
+                                        <div class="notify-heading__right-icon">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="notify-content">
+                                    <div class="notify-content__new">
+                                        <div class="notify-content__new-head">
+                                            <p class="notify-content__head-text new-notify__title">
+                                                Mới
+                                            </p>
+                                            <ul class="notify-content__new-list">
+                                                
+                                            </ul>
+                                            <p class="notify-content__head-text">
+                                                Trước đó
+                                            </p>
+                                            <ul class="notify-content__before-list">
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> -->
+                        <li class="header-right__item">
+                            <i class="fas fa-caret-down header-right__item-caret-down"></i>
+                            <div class="header-right__item-more header-right__setting">
+                                <div class="setting-head nav-wall">
+                                    <img src="" alt="" class="avt setting-head__avatar">
+                                    <div class="setting-head__content">
+                                        <p class="setting-head__content-name full-name">
+                                            Lê Hồ
+                                        </p>
+                                        <p class="setting-head__content-note">
+                                            Xem trang cá nhân của bạn
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="setting__respond">
+                                    <div>
+                                        <div class="setting__respond-img">
+                                            <i class="fas fa-exclamation-circle"></i>
+                                        </div>
+                                        <div class="setting__respond-content">
+                                            <p class="setting__respond-title">
+                                                Đóng góp ý kiến
+                                            </p>
+                                            <p class="setting__respond-note">
+                                                Góp phần cải thiện Facebook mới.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="setting__list">
+                                    <li class="setting__item">
+                                        <div class="setting__item-img">
+                                            <i class="fas fa-cogs"></i>
+                                        </div>
+                                        <p class="setting__item-content">
+                                            Cài đặt & quyền riêng tư
+                                        </p>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </li>
+                                    <li class="setting__item">
+                                        <div class="setting__item-img">
+                                            <i class="fas fa-question-circle"></i>
+                                        </div>
+                                        <p class="setting__item-content">
+                                            Trợ giúp & hỗ trợ
+                                        </p>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </li>
+                                    <li class="setting__item">
+                                        <div class="setting__item-img">
+                                            <i class="fas fa-moon"></i>
+                                        </div>
+                                        <p class="setting__item-content">
+                                            Màn hình & trợ năng
+                                        </p>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </li>
+                                    <li class="setting__item nav-logout">
+                                        <a href="index.html">
+                                            <div class="setting__item-img">
+                                                <i class="fas fa-sign-out-alt"></i>
+                                            </div>
+                                            <p class="setting__item-content">
+                                                    Đăng xuất
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="setting__footer">
+                                    <span>
+                                        Quyền riêng tư
+                                    </span>
+                                    ·
+                                    <span>
+                                        Điều khoản
+                                    </span>
+                                    · 
+                                    <span>
+                                        Quảng cáo
+                                    </span>   
+                                    ·
+                                    <span>
+                                        Cookie
+                                    </span>   
+                                    · 
+                                    <span>
+                                        Chính sách
+                                    </span> 
+                                    · 
+                                    Facebook © 2021
+                                </footer>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                
+            </header>
+
+            <div class="container">
+                <div class="container-left">
+                    <div class="container-left__head">
+                        <div class="container-left__head-top">
+                            <div class="container-left__head-top-title">
+                                Chat
+                            </div>
+                            <div class="container-left__head-top-group">
+                                <div class="container-left__head-group-btn">
+                                    <i class="far fa-ellipsis-h"></i>
+                                </div>
+                                <div class="container-left__head-group-btn">
+                                    <i class="fas fa-video-plus"></i>
+                                </div>
+                                <div class="container-left__head-group-btn">
+                                    <i class="fas fa-edit"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-left__head-search">
+                            <div class="container-left__search-box">
+                                <div class="container-left__search-box-icon">
+                                    <i class="fal fa-search"></i>
+                                </div>
+                                <input type="text" class="container-left__search-box-input" placeholder="Tìm kiếm trên Messenger">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-left__body">
+                        <ul class="container-left__list">
+                            <li class="container-left__item">
+                                <div class="container-left__item-avatar">
+                                    <img src="./assets/img/avatar-nam.jpg" alt="" class="container-left__item-avatar-img">
+                                </div>
+                                <div class="container-left__item-info">
+                                    <div class="container-left__item-info-name">
+                                        Minh Trần
+                                    </div>
+                                    <div class="container-left__item-info-sub">
+                                        <div class="container-left__item-info-last-mess">
+                                            Okii mai
+                                        </div>
+                                        ·
+                                        <div class="container-left__item-info-time">
+                                            <span>
+                                                1
+                                            </span>
+                                            giờ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-left__item-see">
+                                    <div class="container-left__item-see-img">
+                                        <img src="./assets/img/avatar-nam.jpg" alt="">
+                                    </div>
+                                    <div class="container-left__item-see-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="container-left__item active">
+                                <div class="container-left__item-avatar">
+                                    <img src="./assets/img/avatar-nam.jpg" alt="" class="container-left__item-avatar-img">
+                                </div>
+                                <div class="container-left__item-info">
+                                    <div class="container-left__item-info-name">
+                                        Minh Trần
+                                    </div>
+                                    <div class="container-left__item-info-sub">
+                                        <div class="container-left__item-info-last-mess">
+                                            Okii mai
+                                        </div>
+                                        ·
+                                        <div class="container-left__item-info-time">
+                                            <span>
+                                                1
+                                            </span>
+                                            giờ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-left__item-see">
+                                    <div class="container-left__item-see-img">
+                                        <img src="./assets/img/avatar-nam.jpg" alt="">
+                                    </div>
+                                    <div class="container-left__item-see-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container-main">
+                    <div class="container-main__head">
+                        <div class="container-main__head-left">
+                            <div class="container-main__head-left-avt">
+                                <img class="container-main__head-left-avt-img avt-mess" src="./assets/img/avatar-nam.jpg" alt="">
+                            </div>
+                            <div class="container-main__head-left-info">
+                                <div class="container-main__head-left-info__name name-mess">
+                                    Minh Trần
+                                </div>
+                                <div class="container-main__head-left-info-time online">
+                                    Hoạt động
+                                    <span>1</span>
+                                    giờ trước
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-main__head-right">
+                            <div class="container-main__head-right-btn">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="container-main__head-right-btn">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="container-main__head-right-btn more-info-btn">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-main__body">
+                        <div class="container-main__list--no-content">
+                            <div class="no-content__avt">
+                                <img src="./assets/img/avatar-nam.jpg" alt="" class="no-content__img avt-mess">
+                            </div>
+                            <div class="no-content__info">
+                                <div class="no-content__info-name name-mess">
+                                    User
+                                </div>
+                                <div class="no-content__info-sub">
+                                    Facebook
+                                    <br>
+                                    Các bạn là bạn bè trên Facebook
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="container-main__list">
+                            <li class="container-main__item isReaction">
+                                <div class="container-main__item-avt">
+                                    <img src="./assets/img/avatar-nam.jpg" alt="" class="container-main__item-avt__img">
+                                </div>
+                                <div class="container-main__item-content">
+                                    <div class="container-main__item-text">
+                                        Thử màu đó coi sao
+                                    </div>
+                                    <div class="container-main__item-reaction">
+                                        <div class="container-main__item-reaction-icon">
+                                            <i style="color: #ff504b" class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="container-main__item-reaction-total">
+                                            1
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-main__item-group">
+                                    <div class="container-main__item-group-btn">
+                                        <i style="color: #ff504b" class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="container-main__item-group-btn">
+                                        <i class="fad fa-trash-alt"></i>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="container-main__item isUser isReaction">
+                                <div class="container-main__item-avt">
+                                    <img src="./assets/img/avatar-nam.jpg" alt="" class="container-main__item-avt__img">
+                                </div>
+                                <div class="container-main__item-content">
+                                    <div class="container-main__item-text">
+                                        Thử màu đó coi sao
+                                    </div>
+                                    <div class="container-main__item-reaction">
+                                        <div class="container-main__item-reaction-icon">
+                                            <i style="color: #ff504b" class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="container-main__item-reaction-total">
+                                            1
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-main__item-group">
+                                    <div class="container-main__item-group-btn">
+                                        <i style="color: #ff504b" class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="container-main__item-group-btn">
+                                        <i class="fad fa-trash-alt"></i>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="container-main__item isUser isReaction">
+                                <div class="container-main__item-avt">
+                                    <img src="./assets/img/avatar-nam.jpg" alt="" class="container-main__item-avt__img">
+                                </div>
+                                <div class="container-main__item-content">
+                                    <div class="container-main__item-text">
+                                        Thử màu đó coi sao
+                                    </div>
+                                    <div class="container-main__item-reaction">
+                                        <div class="container-main__item-reaction-icon">
+                                            <i style="color: #ff504b" class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="container-main__item-reaction-total">
+                                            1
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-main__item-group">
+                                    <div class="container-main__item-group-btn reaction-btn">
+                                        <i style="color: #ff504b" class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="container-main__item-group-btn">
+                                        <i class="fad fa-trash-alt"></i>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="container-main__item">
+                                <div class="container-main__item-avt">
+                                    <img src="./assets/img/avatar-nam.jpg" alt="" class="container-main__item-avt__img">
+                                </div>
+                                <div class="container-main__item-content">
+                                    <div class="container-main__item-text">
+                                        Thử màu đó coi sao
+                                    </div>
+                                    <div class="container-main__item-reaction">
+                                        <div class="container-main__item-reaction-icon">
+                                            <i style="color: #ff504b" class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="container-main__item-reaction-total">
+                                            1
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-main__item-group">
+                                    <div class="container-main__item-group-btn">
+                                        <i style="color: #ff504b" class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="container-main__item-group-btn">
+                                        <i class="fad fa-trash-alt"></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="container-main__bottom">
+                        <div class="container-main__bottom-left">
+                            <div class="container-main__bottom-left-icon">
+                                <i class="fas fa-plus-circle"></i>
+                            </div>
+                            <div class="container-main__bottom-left-icon hide">
+                                <i class="fas fa-portrait"></i>
+                            </div>
+                            <div class="container-main__bottom-left-icon hide">
+                                <i class="fas fa-air-freshener"></i>
+                            </div>
+                            <div class="container-main__bottom-left-icon hide">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                        </div>
+                        <div class="container-main__bottom-search">
+                            <input type="text" placeholder="Aa" class="container-main__bottom-search-input">
+                            <div class="container-main__bottom-search__icon">
+                                <i class="fas fa-smile-wink"></i>
+                                <div class="container-main__bottom-search__list-icon">
+                                    <div class="container-main__bottom-icon-item">
+                                        <i style="color: #ffbc22;" alt="&#xf4da;" class="fas fa-smile-wink"></i>
+                                    </div>
+                                    <div class="container-main__bottom-icon-item">
+                                        <i style="color: #ffbc22;" alt="&#xf5b4;" class="fas fa-sad-tear"></i>
+                                    </div>
+                                    <div class="container-main__bottom-icon-item">
+                                        <i style="color: #ffbc22;" alt="&#xf586;" class="fas fa-grin-squint-tears"></i>
+                                    </div>
+                                    <div class="container-main__bottom-icon-item">
+                                        <i style="color: #ffbc22;" alt="&#xf556;" class="fas fa-angry"></i>
+                                    </div>
+                                    <div class="container-main__bottom-icon-item">
+                                        <i style="color: #ffbc22;" alt="&#xf579;" class="fas fa-flushed"></i>
+                                    </div>
+                                    <div class="container-main__bottom-icon-item">
+                                        <i style="color: #ffbc22;" alt="&#xf5a4;" class="fas fa-meh-blank"></i>
+                                    </div>
+                                    <div class="container-main__bottom-icon-item">
+                                        <i style="color: #ffbc22;" alt="&#xf5a5;" class="fas fa-meh-rolling-eyes"></i>
+                                    </div>
+                                    <div class="container-main__bottom-icon-item">
+                                        <i style="color: #ffbc22;" alt="&#xf11a;" class="fas fa-meh"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-main__bottom-right">
+                            <div class="container-main__bottom-thumb-up">
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                            <div class="container-main__bottom-send">
+                                <i class="fas fa-arrow-circle-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-right">
+                    <div class="container-right__head">
+                        <div class="container-right__head-avt">
+                            <img src="./assets/img/avatar-nam.jpg" alt="" class="container-right__head-avt-img avt-mess">
+                        </div>
+                        <div class="container-right__head-info">
+                            <div class="container-right__head-name name-mess">
+                                User
+                            </div>
+                            <div class="container-right__head-time online">
+                                Text
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-right__menu">
+                        <div class="container-right__menu-dropdown">
+                            <div class="dropdown-head">
+                                <div class="dropdown-head__title">
+                                    Tuỳ chỉnh đoạn chat
+                                </div>
+                                <div class="dropdown-head__icon">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <ul class="dropdown-list">
+                                <li class="dropdown-item">
+                                    <div class="dropdown-item__icon">
+                                        <i style="color: var(--primary-color)" class="fas fa-dot-circle"></i>
+                                    </div>
+                                    <div class="dropdown-item__text">
+                                        Đổi chủ đề
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-item__icon">
+                                        <i style="color: var(--primary-color)" class="fas fa-thumbs-up"></i>
+                                    </div>
+                                    <div class="dropdown-item__text">
+                                        Thay đổi biểu tượng cảm xúc
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-item__icon">
+                                        <i class="far fa-font-case"></i>
+                                    </div>
+                                    <div class="dropdown-item__text">
+                                        Chỉnh sửa biệt danh
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-item__icon">
+                                        <i class="fal fa-search"></i>
+                                    </div>
+                                    <div class="dropdown-item__text">
+                                        Tìm kiếm trong cuộc trò chuyện
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="container-right__menu-dropdown">
+                            <div class="dropdown-head">
+                                <div class="dropdown-head__title">
+                                    Quyền riêng tư & hỗ trợ
+                                </div>
+                                <div class="dropdown-head__icon">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-right__menu-dropdown">
+                            <div class="dropdown-head">
+                                <div class="dropdown-head__title">
+                                    Tệp được chia sẻ
+                                </div>
+                                <div class="dropdown-head__icon">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-right__menu-dropdown">
+                            <div class="dropdown-head">
+                                <div class="dropdown-head__title">
+                                    File phương tiện được chia sẻ
+                                </div>
+                                <div class="dropdown-head__icon">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="./vendors/js/cute-alert.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/mess.js"></script>
+</body>
+</html>

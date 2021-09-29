@@ -1,0 +1,624 @@
+.my-wall {
+    margin-top: var(--header-height);
+    display: none;
+    animation: fadeIn step-end 0.2s;
+}
+
+.my-wall__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(#b59d79, var(--white-color), var(--white-color)); 
+    z-index: 1;
+}
+
+.my-wall__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.my-wall__top-bg--big {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-wall__top-bg {
+    position: relative;
+    object-fit: contain;
+    width: 100%;
+    max-width: 940px;
+    min-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 360px;
+    overflow: hidden;
+    border-radius: 0px 0 12px 12px;
+}
+
+.my-wall__top-bg-img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.my-wall__top-bg-avatar {
+    position: absolute;
+    bottom: -16px;
+    cursor: pointer;
+}
+
+.my-wall__top-bg-avatar__edit:hover,
+.my-wall__top-bg__edit:hover,
+.my-wall__top-bg-avatar__img:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+.my-wall__top-bg-avatar__img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid var(--border-color);
+}
+
+.my-wall__top-bg-avatar__edit {
+    position: absolute;
+    background-color: #e4e6eb;
+    padding: 12px;
+    border-radius: 50%;
+    bottom: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+
+.my-wall__top-bg-avatar__edit-icon {
+    font-size: 2rem;
+}
+
+.my-wall__top-bg__edit {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.my-wall__top-bg__edit-icon {
+    font-size: 1.5rem;
+    margin-right: 8px;
+}
+
+.my-wall__top-bg__edit-text {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.my-wall__top-info {
+    margin: 24px 0 12px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.my-wall__top-info-name {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.my-wall__top-info-note {
+    font-size: 1.7rem;
+    color: var(--gray-color);
+}
+
+.my-wall__top-info-btn {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.my-wall__top-info-btn:hover {
+    text-decoration: underline;
+}
+
+
+.my-wall__head-more {
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding: 4px 0;
+}
+
+.my-wall__head-more-list {
+    list-style: none;
+    display: flex;
+    margin-right: 4px;
+}
+
+.my-wall__head-more-item {
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.my-wall__head-more-item.active::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary-color);
+    top: 100%;
+    left: 0;
+}
+
+.my-wall__head-more-item.active:hover {
+    background-color: transparent;
+}
+
+.my-wall__head-more-item:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.my-wall__head-more-item__title {
+    color: var(--gray-color);
+    font-weight: 500;
+}
+
+.my-wall__head-more-item__title span {
+    color: var(--gray-color);
+    font-weight: 400;
+}
+
+.my-wall__head-more-btn {
+    margin: 0px 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+.my-wall__head-more-edit {
+    background-color: #e4e6eb;
+    color: #434445;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.my-wall__head-more-edit i {
+    margin-right: 4px;
+}
+
+.my-wall__head-more-setting {
+    margin-left: 8px;
+    background-color: #e4e6eb;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.my-wall__head-more-btn:hover,
+.my-wall__head-more-edit:hover,
+.my-wall__head-more-setting:hover {
+    cursor: pointer;
+    filter: brightness(95%);
+}
+
+.my-wall__main {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    padding-top: 16px;
+    background-color: var(--bg-color);
+}
+
+.my-wall__main-left {
+    width: 360px;
+    height: 100%;
+}
+
+.my-wall__main-left__intro {
+    padding: 16px;
+    background-color: var(--white-color);
+    border-radius: 8px;
+}
+
+.main-left__heading {
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.main-left__intro-content {
+    margin-top: 8px;
+}
+
+.main-left__intro-content__favorite {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    margin-right: 8px;
+    background-color: var(--bg-color);
+}
+
+.main-left__intro-content__favorite
+.main-left__intro-content-item__img,
+.main-left__intro-content__favorite
+.main-left__intro-content-item__text {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.main-left__intro-content-item {
+    display: flex;
+    padding: 8px 0;
+    align-items: center;
+}
+
+.main-left__intro-content-item__img {
+    font-size: 2rem;
+    color: #8A8D91;
+    margin: 0 8px 0 0;
+}
+
+.main-left__intro-content-item:nth-child(2) i{
+    transform: rotate(45deg);
+    margin-left: -4px;
+}
+
+.main-left__intro-content-item__text {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.main-left__intro-content-item__text span {
+    font-weight: 500;
+}
+
+.main-left__intro-content-item__text span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.main-left__intro-content-item__btn {
+    background-color: var(--bg-color);
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 8px;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 8px;
+    color: var(--text-color);
+}
+
+.main-left__intro-content-item__btn:hover,
+.main-left__intro-content__favorite:hover {
+    cursor: pointer;
+    filter: brightness(95%);
+}
+
+.my-wall__main-left__gallery,
+.my-wall__main-left__friends {
+    background-color: var(--white-color);
+    margin-top: 16px;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.main-left__gallery-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-left__more {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    padding: 8px 8px;
+    border-radius: 4px;
+}
+
+.main-left__more:hover {
+    background-color: rgb(233, 231, 231);
+    cursor: pointer;
+}
+
+.main-left__gallery-pictures {
+    list-style: none;
+    display: flex;
+    margin-top: 16px;
+    justify-content: center;
+    gap: 2px;
+}
+
+.main-left__pictures-item:first-child
+.main-left__pictures-item-img {
+    border-radius: 8px 0 0 8px;
+}
+
+.main-left__pictures-item:last-child
+.main-left__pictures-item-img {
+    border-radius: 0 8px 8px 0px;
+}
+
+.main-left__pictures-item-img {
+    width: 104px;
+    height: 104px;
+    object-fit: cover;
+    border: 1px solid rgb(240, 240, 240);
+}
+
+.main-left__pictures-item-img:hover {
+    filter: brightness(95%);
+    cursor: pointer;
+}
+
+.main-left__friends-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.main-left__heading div{
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--gray-color);
+}
+
+.main-left__friends-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.main-left__friends-item {
+    width: calc(100%/3 - 6px);
+    display: flex;
+    flex-direction: column;
+}
+
+.main-left__friends-item:hover {
+    cursor: pointer;
+    filter: brightness(95%);
+}
+
+.imgmain-left__friends-img {
+    width: 104px;
+    height: 104px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgb(240, 240, 240);
+}
+
+.main-left__friends-item-text {
+    color: var(--text-color);
+    margin: 8px auto;
+    font-size: 1.3rem;
+    font-weight: 500;
+    max-width: 100px;
+    text-align: center;
+}
+
+.main-left__friends-item-text:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.my-wall__main-left__footer {
+    margin-top: 16px;
+    padding: 0 16px 12px 16px;
+}
+
+.my-wall__main-left__intro,
+.my-wall__main-left__gallery,
+.my-wall__main-left__friends {
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3);
+}
+
+.my-wall__main-right {
+    width: 500px;
+}
+
+.main-right__posts,
+.main-right__option {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    padding: 0 16px;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 16px;
+}
+
+.main-right__option {
+    margin-top: 16px;
+}
+
+.main-right__option-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.main-right__option-head__title {
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.main-right__option-head__more {
+    display: flex;
+    gap: 4px;
+}
+
+.main-right__option-head__more-btn {
+    background-color: #ddd;
+    display: flex;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.main-right__option-head__more-btn:hover {
+    cursor: pointer;
+    filter: brightness(95%);
+}
+
+.main-right__option-head__more-btn-icon {
+    font-size: 1.6rem;
+    color: #4c4d4e;
+    margin-right: 8px;
+}
+
+.main-right__option-head__more-btn-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.main-right__option-select {
+    display: flex;
+    padding: 4px 0;
+}
+
+.main-right__option-item {
+    width: 50%;
+    position: relative;
+}
+
+.main-right__option-select-item {
+    width: 100%;
+    display: flex;
+    padding: 8px 0;
+    justify-content: center;
+    border-radius: 6px;
+    color: var(--gray-color);
+}
+
+.main-right__option-item.active::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary-color);
+    top: 105%;
+    left: 0;
+}
+
+.main-right__option-item.active
+.main-right__option-select-item {
+    color: var(--primary-color);
+}
+
+.main-right__option-item.active
+.main-right__option-select-item:hover {
+    background-color: transparent;
+}
+
+.main-right__option-select-item:hover {
+    background-color: var(--hover-item);
+    cursor: pointer;
+}
+
+.main-right__option-select-item__icon {
+    font-size: 1.6rem;
+    margin-right: 8px;
+}
+
+.main-right__option-select-item__text {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* --------------------------------------- */
+
+@media (max-width: 900px) {
+    .my-wall__head-more-list 
+    .my-wall__head-more-item {
+        display: none;
+    }
+
+    .my-wall__head-more-list 
+    .my-wall__head-more-item:nth-child(5) {
+        display: block;
+    }
+
+    .my-wall__main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .my-wall__main-left {
+        width: 80%;
+        min-width: 500px;
+    }
+    .main-left__pictures-item {
+        flex: 1;
+        height: 100%;
+    }
+    .main-left__pictures-item-img {
+        width: 100%;
+    }
+
+    .imgmain-left__friends-img {
+        width: 100%;
+    }
+    .my-wall__main-left {
+        position: static !important; 
+    }
+}
+
+@media (max-width: 560px) {
+    html {
+        font-size: 55%;
+    }
+    .my-wall__main-left {
+        min-width: 100%;
+    }
+    .my-wall__top-bg__edit-text {
+        display: none;
+    }
+    .my-wall__head-more-list 
+    .my-wall__head-more-item:nth-child(5) {
+        display: none;
+    }
+    .my-wall__top-bg__edit-icon {
+        margin-right: 0;
+    }
+    .my-wall__main-right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .my-wall__head-more-btn {
+        display: none;
+    }
+    .my-wall__top-bg {
+        min-width: 100%;
+    }
+}

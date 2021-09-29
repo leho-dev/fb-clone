@@ -1,0 +1,14 @@
+:root {
+    --primary-color: #1877f2;
+    --bg-color: #f0f2f5;
+    --text-color: #1c1e21;
+    --white-color: #fff;
+    --border-color: #dddfe2;
+    --placeholder-color: #9e949c;
+    --green-color: #42b72a;
+    --gray-color: #75777b;
+    --header-height: 56px;
+    --hover-item: rgb(224, 223, 223);
+    --rgba-black: rgba(0, 0, 0, 0.1);
+    --active-min: #eaf3ff;
+}
