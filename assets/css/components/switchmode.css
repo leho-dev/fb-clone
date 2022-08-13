@@ -1,5 +1,4 @@
 .header-switch {
-    
 }
 
 .header-switch__box {
@@ -32,12 +31,10 @@
     transition: transform ease-in-out 0.5s;
 }
 
-.header-switch__box.dark
-.switch-sun {
+.header-switch__box.dark .switch-sun {
     transform: translateX(-100px);
 }
 
-.header-switch__box.dark
-.switch-moon {
+.header-switch__box.dark .switch-moon {
     transform: translateX(0);
 }

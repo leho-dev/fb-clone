@@ -7,8 +7,7 @@
     transform: translate(-50%, -50%);
     z-index: 3;
     border-radius: 8px;
-    box-shadow: -1px 1px 2px var(--rgba-black),
-                1px 1px 2px var(--rgba-black);
+    box-shadow: -1px 1px 2px var(--rgba-black), 1px 1px 2px var(--rgba-black);
     animation: fadeIn ease-in 0.3s;
 }
 
@@ -120,7 +119,7 @@
     position: relative;
 }
 
-.post-box__content-img span{
+.post-box__content-img span {
     position: absolute;
     font-size: 2.8rem;
     top: 16px;
@@ -134,7 +133,7 @@
 
 .post-box__content-img span:hover {
     cursor: pointer;
-    filter: brightness(95%)
+    filter: brightness(95%);
 }
 
 .post-box__add {
@@ -145,7 +144,7 @@
     padding: 12px;
     border-radius: 8px;
     box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.05),
-                2px -2px 2px rgba(0, 0, 0, 0.05);
+        2px -2px 2px rgba(0, 0, 0, 0.05);
 }
 
 .post-box__add-head {

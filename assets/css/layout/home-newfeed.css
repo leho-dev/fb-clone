@@ -5,7 +5,7 @@
     border-radius: 8px;
     box-shadow: 0 0px 2px var(--gray-color);
     padding-bottom: 4px;
-}  
+}
 
 .newsfeed__info {
     display: flex;
@@ -50,7 +50,7 @@
     margin-left: 4px;
 }
 
-.newsfeed__info-time:hover{
+.newsfeed__info-time:hover {
     text-decoration: underline;
     cursor: pointer;
 }
@@ -133,8 +133,7 @@
 .newsfeed__info-setting-item__title {
     font-size: 1.2rem;
     color: #65676b;
-}  
-
+}
 
 .more-dots {
     color: var(--gray-color);
@@ -192,8 +191,7 @@
     font-size: 1rem;
 }
 
-.newsfeed__respond-react
-.icon-heart {
+.newsfeed__respond-react .icon-heart {
     margin-left: -3px;
     background-color: #fa383e;
 }
@@ -244,21 +242,17 @@
     border-radius: 4px;
     position: relative;
     transition: all ease-in-out 0.3s;
-}  
+}
 
-.newsfeed__action-item.active
-.newsfeed__action-item-icon,
-.newsfeed__action-item.active
-.newsfeed__action-item-text {
+.newsfeed__action-item.active .newsfeed__action-item-icon,
+.newsfeed__action-item.active .newsfeed__action-item-text {
     color: var(--primary-color);
     transform: scale(1.1);
 }
 
-.newsfeed__action-item.active
-.newsfeed__action-item-icon {
+.newsfeed__action-item.active .newsfeed__action-item-icon {
     transform: rotate(-10deg);
 }
-
 
 .newsfeed__action-item:hover {
     background-color: #ddd;
@@ -354,7 +348,6 @@
 /* ---------------------------------------- */
 
 .newsfeed__commented-box {
-
 }
 
 .commented-switch {
@@ -394,7 +387,6 @@
 }
 
 .commented-box::-webkit-scrollbar {
-    
 }
 
 .commented-box__item {
@@ -408,8 +400,7 @@
     margin-top: 4px;
 }
 
-.commented-box__item-user:hover 
-.commented-box__item-delete {
+.commented-box__item-user:hover .commented-box__item-delete {
     opacity: 1;
     transform: translateX(0);
 }
@@ -432,13 +423,12 @@
     transition: all ease-in-out 0.3;
 }
 
-.commented-box__item-delete i{
+.commented-box__item-delete i {
     font-size: 1.4rem;
     color: var(--text-color);
 }
 
-.commented-box__item-user.sub
-.commented-box__item-avatar {
+.commented-box__item-user.sub .commented-box__item-avatar {
     width: 28px;
     height: 28px;
 }
@@ -467,7 +457,6 @@
 }
 
 .comented-box__item-content {
-
 }
 
 .comented-box__item-name {
@@ -496,7 +485,7 @@
 
 .commented-box__item-reaction span:hover {
     cursor: pointer;
-    opacity: .8;
+    opacity: 0.8;
 }
 
 .commented-box__item-reaction--like.active {

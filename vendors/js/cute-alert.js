@@ -1,51 +1,55 @@
 // Alert box design by Igor Ferrão de Souza: https://www.linkedin.com/in/igor-ferr%C3%A3o-de-souza-4122407b/
 
 const cuteAlert = ({
-  type,
-  title,
-  message,
-  buttonText = "OK",
-  confirmText = "OK",
-  cancelText = "Cancel",
-  closeStyle,
+    type,
+    title,
+    message,
+    buttonText = "OK",
+    confirmText = "OK",
+    cancelText = "Cancel",
+    closeStyle,
 }) => {
-  return new Promise((resolve) => {
-    const existingAlert = document.querySelector(".alert-wrapper");
+    return new Promise((resolve) => {
+        const existingAlert = document.querySelector(".alert-wrapper");
 
-    if (existingAlert) {
-      existingAlert.remove();
-    }
+        if (existingAlert) {
+            existingAlert.remove();
+        }
 
-    const body = document.querySelector("body");
+        const body = document.querySelector("body");
 
-    const scripts = document.getElementsByTagName("script");
+        const scripts = document.getElementsByTagName("script");
 
-    let src = "";
+        let src = "";
 
-    for (let script of scripts) {
-      if (script.src.includes("cute-alert.js")) {
-        src = script.src.substring(0, script.src.lastIndexOf("/"));
-      }
-    }
+        for (let script of scripts) {
+            if (script.src.includes("cute-alert.js")) {
+                src = script.src.substring(0, script.src.lastIndexOf("/"));
+            }
+        }
 
-    let btnTemplate = `
+        let btnTemplate = `
     <button class="alert-button ${type}-bg ${type}-btn">${buttonText}</button>
     `;
 
-    if (type === "question") {
-      btnTemplate = `
+        if (type === "question") {
+            btnTemplate = `
       <div class="question-buttons">
         <button class="confirm-button ${type}-bg ${type}-btn">${confirmText}</button>
         <button class="cancel-button error-bg error-btn">${cancelText}</button>
       </div>
       `;
-    }
+        }
 
-    const template = `
+        const template = `
     <div class="alert-wrapper">
       <div class="alert-frame">
         <div class="alert-header ${type}-bg">
-          <span class="alert-close ${closeStyle === "circle" ? "alert-close-circle" : "alert-close-default"}">X</span>
+          <span class="alert-close ${
+              closeStyle === "circle"
+                  ? "alert-close-circle"
+                  : "alert-close-default"
+          }">X</span>
           <img class="alert-img" src="./assets/img/cute-alert/${type}.svg" />
         </div>
         <div class="alert-body">
@@ -57,71 +61,71 @@ const cuteAlert = ({
     </div>
     `;
 
-    body.insertAdjacentHTML("afterend", template);
+        body.insertAdjacentHTML("afterend", template);
 
-    const alertWrapper = document.querySelector(".alert-wrapper");
-    const alertFrame = document.querySelector(".alert-frame");
-    const alertClose = document.querySelector(".alert-close");
+        const alertWrapper = document.querySelector(".alert-wrapper");
+        const alertFrame = document.querySelector(".alert-frame");
+        const alertClose = document.querySelector(".alert-close");
 
-    if (type === "question") {
-      const confirmButton = document.querySelector(".confirm-button");
-      const cancelButton = document.querySelector(".cancel-button");
+        if (type === "question") {
+            const confirmButton = document.querySelector(".confirm-button");
+            const cancelButton = document.querySelector(".cancel-button");
 
-      confirmButton.addEventListener("click", () => {
-        alertWrapper.remove();
-        resolve("confirm");
-      });
+            confirmButton.addEventListener("click", () => {
+                alertWrapper.remove();
+                resolve("confirm");
+            });
 
-      cancelButton.addEventListener("click", () => {
-        alertWrapper.remove();
-        resolve();
-      });
-    } else {
-      const alertButton = document.querySelector(".alert-button");
+            cancelButton.addEventListener("click", () => {
+                alertWrapper.remove();
+                resolve();
+            });
+        } else {
+            const alertButton = document.querySelector(".alert-button");
 
-      alertButton.addEventListener("click", () => {
-        alertWrapper.remove();
-        resolve();
-      });
-    }
+            alertButton.addEventListener("click", () => {
+                alertWrapper.remove();
+                resolve();
+            });
+        }
 
-    alertClose.addEventListener("click", () => {
-      alertWrapper.remove();
-      resolve();
+        alertClose.addEventListener("click", () => {
+            alertWrapper.remove();
+            resolve();
+        });
+
+        alertWrapper.addEventListener("click", () => {
+            alertWrapper.remove();
+            resolve();
+        });
+
+        alertFrame.addEventListener("click", (e) => {
+            e.stopPropagation();
+        });
     });
-
-    alertWrapper.addEventListener("click", () => {
-      alertWrapper.remove();
-      resolve();
-    });
-
-    alertFrame.addEventListener("click", (e) => {
-      e.stopPropagation();
-    });
-  });
-}
+};
 
 const cuteToast = ({ type, message, timer = 5000 }) => {
-  return new Promise((resolve) => {
-    const existingToast = document.querySelector(".toast-container");
+    return new Promise((resolve) => {
+        const existingToast = document.querySelector(".toast-container");
 
-    if (existingToast) {
-      existingToast.remove();
-    }
+        if (existingToast) {
+            existingToast.remove();
+        }
 
-    const body = document.querySelector("body");
+        const body = document.querySelector("body");
 
-    const scripts = document.getElementsByTagName("script");
+        const scripts = document.getElementsByTagName("script");
 
-    let src = "";
+        let src = "";
 
-    for (let script of scripts) {
-      if (script.src.includes("cute-alert.js")) {
-        src = script.src.substring(0, script.src.lastIndexOf("/"));
-      }
-    }
+        for (let script of scripts) {
+            if (script.src.includes("cute-alert.js")) {
+                src = script.src.substring(0, script.src.lastIndexOf("/"));
+            }
+        }
 
-    const template = `
+        const template = `
     <div class="toast-container ${type}-bg">
       <div>
         <div class="toast-frame">
@@ -134,20 +138,21 @@ const cuteToast = ({ type, message, timer = 5000 }) => {
     </div>
     `;
 
-    body.insertAdjacentHTML("afterend", template);
+        body.insertAdjacentHTML("afterend", template);
 
-    const toastContainer = document.querySelector(".toast-container");
+        const toastContainer = document.querySelector(".toast-container");
 
-    setTimeout(() => {
-      toastContainer.remove();
-      resolve();
-    }, timer);
+        setTimeout(() => {
+            toastContainer.remove();
+            resolve();
+        }, timer);
 
-    const toastClose = document.querySelector(".toast-close");
+        const toastClose = document.querySelector(".toast-close");
 
-    toastClose.addEventListener("click", () => {
-      toastContainer.remove();
-      resolve();
+        toastClose.addEventListener("click", () => {
+            toastContainer.remove();
+            resolve();
+        });
     });
-  });
-}
+};
+

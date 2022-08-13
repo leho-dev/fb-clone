@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
     padding: 0;
     margin: 0;
     -webkit-box-sizing: inherit;
-            box-sizing: inherit;
+    box-sizing: inherit;
 }
-  
+
 html {
     font-size: 62.5%;
 }
-  
+
 body {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     user-select: none;
     scroll-behavior: smooth;
@@ -61,7 +61,7 @@ body::-webkit-scrollbar {
 .btn:hover {
     cursor: pointer;
     -webkit-filter: brightness(96%);
-            filter: brightness(96%);
+    filter: brightness(96%);
 }
 
 .btn-disable {
@@ -79,7 +79,7 @@ body::-webkit-scrollbar {
 .overplay {
     position: fixed;
     top: 0;
-    right:0;
+    right: 0;
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.6);

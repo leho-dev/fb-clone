@@ -4,7 +4,6 @@
 @import "./components/switchmode.css";
 @import "./layout/mess-container.css";
 
-
 .app {
     background: var(--white-color);
 }
@@ -13,7 +12,6 @@
     max-width: 1365px;
     margin: 0 auto;
 }
-
 
 .app.dark {
     --bg-color: #18191a;
