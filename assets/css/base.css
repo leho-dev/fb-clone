@@ -95,4 +95,5 @@ body::-webkit-scrollbar {
     animation-name: scale;
     animation-timing-function: ease-in-out;
     animation-duration: 0.7s;
+    
 }

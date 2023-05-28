@@ -50,7 +50,7 @@ const compactNumber = (value) => {
 const userOnline = (() => {
     const uersOnl = [
         {
-            path: "./assets/img/Home/user-1.jpg",
+            path: "./assets/img/Home/user-4.png",
             name: "Nguyễn Thị Hiền Vy",
         },
         {
@@ -608,15 +608,15 @@ const app = (() => {
                         return `
                     <li class="mess-item">
                         <div class="mess-item__active">
-                            <img src="${user.avatar}" alt="" class="mess-item__avatar">
+                            <img src="${user?.avatar}" alt="" class="mess-item__avatar">
                         </div>
                         <div class="mess-list__info">
                             <div class="mess-item__info-name">
-                                ${user.fullName}
+                                ${user?.fullName}
                             </div>
                             <div class="mess-item__info-text">
                                 <div>
-                                    ${mess.content}
+                                    ${mess?.content}
                                 </div>
                                 <i class="fas fa-circle"></i> 
                                 <span>
